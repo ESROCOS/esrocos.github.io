@@ -1,1 +1,1 @@
-gem install jekyll-feed
+gem install bundler jekyll jekyll-sitemap jekyll-feed
