@@ -6,10 +6,6 @@ RUBY=ruby
 AUTOPROJ_BOOTSTRAP_URL=http://rock-robotics.org/master/autoproj_bootstrap
 BOOTSTRAP_ARGS=
 
-mkdir -p ~/esrocos_workspace
-cd ~/esrocos_workspace
-
-
 # RUBY RUBY RUBY
 
 if test -n "$1" && test "$1" != "dev" && test "$1" != "localdev"; then
@@ -24,10 +20,9 @@ set -e
 
 if ! which $RUBY > /dev/null 2>&1; then
     echo "cannot find the ruby executable. On ubuntu, you should run"
-    echo "  sudo apt-get install ruby2.1"
-    echo "or on Ubuntu 14.04"
-    echo "  sudo apt-get install ruby2.0"
-    exit 1
+    echo "Will install ruby 2.1.\n"
+    sudo apt-get install ruby
+    RUBY=ruby
 fi
 
 # EVEN MORE RUBY

@@ -19,6 +19,7 @@ You will require a working TASTE installation. Currently, we suggest you to use 
    ```
 4. Execute boot strap file
    ```
+   chmod 770 install_esrocos
    ./install_esrocos
    ```
    During the installation process you'll be asked...
